@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+</head>
+<body>
+    <header>
+        <h1>Personal Book Library</h1>
+    </header>
+    <form id="entry-form">
+        <label for="title">Book Name:</label>
+        <input type="text" name="title" id="title" min="2" max="50">
+
+        <label for="author">Book Author:</label>
+        <input type="text" name="author" id="author" min="2" max="50">
+
+        <label for="cover-url">Book Cover URL:</label>
+        <input type="url" name="cover-url" id="cover-url">
+
+        <label for="rating">Rate the book:</label>
+        <input type="range" name="rating" id="rating" value="3" min="1" max="5">
+        <p id="rating-preview"></p>
+
+        <label for="review">Write a Review:</label>
+        <input type="text" name="review" id="review">
+
+        <input type="submit" value="Add Book">
+    </form>
+    <section id="books-display">
+
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
