@@ -11,11 +11,22 @@
         ratingPreview.textContent = ratingRange.value;
     });
 
+    // Helper function to validate form data
+    function validateFormData(formData) {
+        return true;
+    };
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        const formDataObj = new FormData(form);
+        const formObject = Object.fromEntries(formDataObj.entries());
+        const formData = JSON.stringify(formObject, null, 2);
         // Validation
         // Add book data to local storage
-        console.log('submitted');
+        if(!validateFormData(formData)) {
+            console.log('Validated');
+        };
+        console.log('submitted:', formData);
     });
     
 })();
